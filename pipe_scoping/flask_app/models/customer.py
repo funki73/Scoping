@@ -68,15 +68,15 @@ class Customer:
 
     @classmethod
     def update(cls, data):
-        query = "UPDATE customers SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s, password = %(password)s, phone = %(phone)s, address = %(address)s, apt_number = %(apt_number)s, city = %(city)s, state = %(state)s, zip = %(zip)s, requestor_type = %(requestor_type)s, location_type = %(location_type)s, year_built = %(year_built)s, num_of_rooms = %(num_of_rooms)s, num_of_stories = %(num_of_stories)s, cleanout_pipes = %(cleanout_pipes)s, created_at = NOW(), updated_at = NOW() VALUES WHERE id = %(id)s;"
+        query = "UPDATE customers SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s, password = %(password)s, phone = %(phone)s, address = %(address)s, apt_number = %(apt_number)s, city = %(city)s, state = %(state)s, zip = %(zip)s, requestor_type = %(requestor_type)s, location_type = %(location_type)s, year_built = %(year_built)s, num_of_rooms = %(num_of_rooms)s, num_of_stories = %(num_of_stories)s, cleanout_pipes = %(cleanout_pipes)s, created_at = NOW(), updated_at = NOW() VALUES WHERE id = %(id)s"
 
         return connectToMySQL("scoping").query_db(query, data)
 
 
     @classmethod
     def delete(cls,data):
-        query = "DELETE FROM customers WHERE id = %(id)s;"
-        
+        query = "DELETE FROM customers WHERE id = %(id)s"
+
         connectToMySQL("scoping").query_db(query, data)
 
 

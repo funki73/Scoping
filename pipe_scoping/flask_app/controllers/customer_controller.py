@@ -66,7 +66,8 @@ def edit():
     hash_browns = bcrypt.generate_password_hash(request.form['password'])
     data ={
         **request.form,
-        "password": hash_browns
+        "password": hash_browns,
+        "id": session['uuid']
     }
 
     customer_id = Customer.update(data)
@@ -100,5 +101,5 @@ def logout():
 
 @app.route("/customer_details/delete")
 def delete_customer():
-    Customer.delete(id)
+    Customer.delete({"id": session['uuid']})
     return redirect("/")
