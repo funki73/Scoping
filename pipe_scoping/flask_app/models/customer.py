@@ -72,6 +72,14 @@ class Customer:
 
         return connectToMySQL("scoping").query_db(query, data)
 
+
+    @classmethod
+    def delete(cls,data):
+        query = "DELETE FROM customers WHERE id = %(id)s;"
+        
+        connectToMySQL("scoping").query_db(query, data)
+
+
     @classmethod
     def create(cls, data):
         query = "INSERT INTO customers (first_name, last_name, email, password, phone, address, apt_number, city, state, zip, requestor_type, location_type, year_built, num_of_rooms, num_of_stories, cleanout_pipes, created_at, updated_at) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s, %(phone)s, %(address)s, %(apt_number)s, %(city)s, %(state)s,  %(zip)s, %(requestor_type)s, %(location_type)s, %(year_built)s, %(num_of_rooms)s, %(num_of_stories)s, %(cleanout_pipes)s, NOW(), NOW())"

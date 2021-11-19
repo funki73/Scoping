@@ -97,3 +97,8 @@ def logout():
     session.clear()
 
     return redirect("/")
+
+@app.route("/customer_details/delete")
+def delete_customer():
+    Customer.delete(id)
+    return redirect("/")
