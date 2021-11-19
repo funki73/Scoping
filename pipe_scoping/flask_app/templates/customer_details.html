@@ -18,7 +18,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <h2>Welcome {{ customer.first_name }}</h2>
                     <div class="col">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <p><strong>First Name:</strong>         {{ customer.first_name }}</p>
                             <p><strong>Last Name:</strong>        {{ customer.last_name }}</p>
                             <p><strong>Email:</strong>            {{ customer.email }}</p>
@@ -46,19 +46,24 @@
                             <p><strong>Location Type:</strong>    {{ customer.location_type }}</p>
                             <p><strong>Year Built:</strong>       {{ customer.year_built }}</p>
                             <p><strong>Number of Rooms:</strong>  {{ customer.num_of_rooms }}</p>
-
-                            <div><h2>Final Assessment File</h2></div>
-                            <br>
-                            <div></div>
                             <div>
                             <button type="submit" class="btn btn-primary"><a href="/edit_details" style="color: white;"> Edit</a></button>
                             </div>
-                            <div>
                             <button type="submit" class="btn btn-primary"><a href="/logout" style="color: white;"> Logout</a></button>
-                            </div>
                     </div>
                     <div class="col">
+                        <h2>Final Assessment File</h2>
+                            <br>
+                            <div><img src="https://img.icons8.com/external-soft-fill-juicy-fish/50/000000/external-document-essentials-soft-fill-soft-fill-juicy-fish.png"/>
+                            (pending:  email notification will be sent when uploaded) </div>
+                            <br>
+                            <br>
+                            <br>
                         <div class="calendly-inline-widget" data-url="https://calendly.com/randy-calpe" style="min-width:320px;height:630px;"></div>
+                    </div>
+                    <div>
+                        <br>
+                        
                     </div>
                 </div>
             </div>
